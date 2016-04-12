@@ -1,0 +1,47 @@
+#heading {
+  font-family: georgia;
+}
+#signForm {
+  width: 40em;
+  position: absolute;;
+}
+#comment {
+  width: 60em;
+}
+#find {
+  width: 70em;
+}
+#topnav {
+  border-radius: 0px !important;
+}
+
+
+.affix {
+      top: 0;
+      width: 100%;
+}
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+}
+.footer {
+      padding: 25px;
+      position: inherit;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+    }
+
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      max-height: 45vh;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
