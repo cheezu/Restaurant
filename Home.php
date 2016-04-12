@@ -56,19 +56,19 @@
             </div>
         </nav>
 
-  <?php
+        <?php
 
-    if(isset($_GET['signupResult'])) {
-      extract($_GET);
-      if($signupResult==1) {
-        echo '<br/><center><span style="color: red">Successfully Registered</span></center>';
-      }
-      else {
-        echo '<br/><center><span style="color: red">Unsuccessful </span></center>';
-      }
+  if(isset($_GET['signupResult'])) {
+    extract($_GET);
+    if($signupResult==1) {
+      echo '<br/><center><span style="color: red">Successfully Registered</span></center>';
     }
+    else {
+      echo '<br/><center><span style="color: red">Unsuccessful </span></center>';
+    }
+  }
 
-  ?>
+ ?>
 <div id="cour">
  <div id="myCarousel" class="carousel slide myCour" data-ride="carousel">
      <!-- Indicators -->
