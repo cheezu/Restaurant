@@ -24,8 +24,8 @@
       $_SESSION['login_user'] = $user;
       header("location: ../home.php?loginResult=1");
     }else {
-      $error = "Your Login Name or Password is invalid";
-      echo $error;
+      echo "<script>console.log($error);</script>";
+      header("Location:../home.php?loginResult=-1");
     }
   }
 

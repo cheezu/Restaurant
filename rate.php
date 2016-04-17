@@ -78,41 +78,41 @@
                           <div class="form-group">
                               <label for="ambience ">Ambience:     </label>
                               <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=5>Excellent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=4>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="ambience" value=3 checked>Average</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=2>Decent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=1>Horrible</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=5 required>Excellent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=4 required>Good</label>
+                                <label class="btn btn-default active"><input type="radio" class="form-control" name="ambience" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=2 required>Decent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=1 required>Horrible</label>
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="res_serv">Restaurant Services:     </label>
                               <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=5>Excellent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=4>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="res_serv" value=3 checked>Average</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=2>Decent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=1>Horrible</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=5 required>Excellent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=4 required>Good</label>
+                                <label class="btn btn-default active"><input type="radio" class="form-control" name="res_serv" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=2 required>Decent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=1 required>Horrible</label>
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="food_qual">Food Quality:     </label>
                               <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=5>Excellent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=4>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="food_qual" value=3 checked>Average</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=2>Decent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=1>Horrible</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=5 required>Excellent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=4 required>Good</label>
+                                <label class="btn btn-default active"><input type="radio" class="form-control" name="food_qual" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=2 required>Decent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=1 required>Horrible</label>
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="vfm">Value for Price:     </label>
                               <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=5>Excellent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=4>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="vfm" value=3 checked>Average</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=2>Decent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm " value=1>Horrible</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=5 required>Excellent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=4 required>Good</label>
+                                <label class="btn btn-default active"><input type="radio" class="form-control" name="vfm" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=2 required>Decent</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm " value=1 required>Horrible</label>
                               </div>
                           </div>
                           <div class="form-group">

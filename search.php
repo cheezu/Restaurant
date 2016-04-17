@@ -18,7 +18,7 @@ if (!$con)
 
     <head>
         <title>Search Results</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="waterstyle.css">
     </head>
 
     <body>

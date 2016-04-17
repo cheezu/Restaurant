@@ -68,6 +68,16 @@
     }
   }
 
+  if(isset($_GET['loginResult'])) {
+    extract($_GET);
+    if($loginResult==1) {
+      echo '<br/><center><span style="color: red">Welcome, '  . $_SESSION['login_user'] . '</span></center>';
+    }
+    else {
+      echo '<br/><center><span style="color: red">Unsuccessful </span></center>';
+    }
+  }
+
  ?>
 <div id="cour">
  <div id="myCarousel" class="carousel slide myCour" data-ride="carousel">
