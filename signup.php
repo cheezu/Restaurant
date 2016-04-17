@@ -106,7 +106,7 @@
                     <p>&nbsp; Dedicated Customer Support</p><br>
                 </div>
             </div>
-
+          </div>
 
             <footer class="container-fluid text-center footer">
                 <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>

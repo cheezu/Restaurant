@@ -53,7 +53,6 @@
         </nav>
 
 
-
       <div class="container-fluid">
               <?php
           echo '<div>';
@@ -80,7 +79,7 @@
                               <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=5 required>Excellent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=4 required>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="ambience" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=3 required>Average</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=2 required>Decent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="ambience" value=1 required>Horrible</label>
                               </div>
@@ -90,7 +89,7 @@
                               <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=5 required>Excellent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=4 required>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="res_serv" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=3 required>Average</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=2 required>Decent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="res_serv" value=1 required>Horrible</label>
                               </div>
@@ -100,7 +99,7 @@
                               <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=5 required>Excellent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=4 required>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="food_qual" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=3 required>Average</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=2 required>Decent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="food_qual" value=1 required>Horrible</label>
                               </div>
@@ -110,15 +109,16 @@
                               <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=5 required>Excellent</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=4 required>Good</label>
-                                <label class="btn btn-default active"><input type="radio" class="form-control" name="vfm" value=3 required>Average</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=3 required>Average</label>
                                 <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=2 required>Decent</label>
-                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm " value=1 required>Horrible</label>
+                                <label class="btn btn-default"><input type="radio" class="form-control" name="vfm" value=1 required>Horrible</label>
                               </div>
                           </div>
                           <div class="form-group">
                               <label for="review">Review: </label>
-                              <textarea class="form-control" rows="5" id="review"></textarea>
+                              <textarea class="form-control" rows="5" name="review"></textarea>
                           </div>
+                          <input type = "hidden" name = "res_id" value = "' . $_REQUEST['id'] . '">
                           <button type="submit" name="submit" class="btn btn-default">Submit</button>
                       </form>
                   </div>
