@@ -111,6 +111,7 @@
                       echo '
                       <p>
                           <a href="rate.php?id=' . $id . '" class="btn btn-primary" role="button">Rate Us</a>
+                          <a href="delivery.php?id=' . $id . '" class="btn btn-primary" role="button">Order Now</a>
                       </p>
                       ';
                   }
