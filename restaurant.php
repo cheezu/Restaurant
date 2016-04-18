@@ -85,6 +85,8 @@
                       $r_query = mysqli_query($con, $sql);
                       $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
                       echo "<br>";
+                      echo "<img src=\"data:image/jpeg;base64," . base64_encode($row['image']) . " \" />";
+                      echo "<br>";
                       echo "Restaurant Name: " . $row['name'];
                       echo "<br>";
                       echo "Location: " . $row['location'];
