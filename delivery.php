@@ -106,7 +106,7 @@
                                  <input type=hidden name=p_id value=' . $row['p_id'] . '>
                                  <input type=hidden name=res_id value=' . $_REQUEST['id']. '>
                                  <td>' . $row['name'] . '</td>
-                                 <td>' . $row['type'] . '</td>
+                                 <td><img src="assets/' . $row['type'] . '.png"/> ' . $row['type'] . '</td>
                                  <td>' . $row['price'] . '</td>
                                  <td><input type="number" name="qty" value="1" required></td>
                                  <td><button class="btn btn-primary" type="submit" name="submit" value="add">Add to Cart</button></td>

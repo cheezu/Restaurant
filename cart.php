@@ -107,7 +107,7 @@
                                  <input type=hidden name=p_id value=' . $row['p_id'] . '>
                                  <td>' . $row['rest_name'] . '</td>
                                  <td>' . $row['p_name'] . '</td>
-                                 <td>' . $row['type'] . '</td>
+                                 <td><img src="assets/' . $row['type'] . '.png"/> ' . $row['type'] . '</td>
                                  <td>' . $row['price'] . '</td>
                                  <td style="width: 300px;"><input type="number" name="qty" value="' . $row['qty'] . '" required></td>
                                  <td>' . $row['price']*$row['qty'] . '</td>

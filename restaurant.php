@@ -132,7 +132,7 @@
       <div class="col-sm-6">
           <div class="container-fluid">
             <?php
-              echo "<strong>Reviews: </strong>";
+              echo "<h3><strong>Reviews</strong></h3>";
               echo "<br>";
                   $con = mysqli_connect("localhost", "root", "dbproject", "db_proj");
 
@@ -145,12 +145,17 @@
 
                   if (isset($_REQUEST['id']) && !empty($_REQUEST['id'])) {
                       $id = mysqli_real_escape_string($con, $_REQUEST['id']);
-                      $sql = "SELECT review FROM rating WHERE res_id=$id";
+                      $sql = "SELECT * FROM rating WHERE res_id=$id";
                       $r_query = mysqli_query($con, $sql);
                       while($row = mysqli_fetch_array($r_query, MYSQLI_ASSOC)) {
-                          echo $row['review'];
-                          echo "<br>";
-                          echo "<br>";
+                        $pat_id = $row['pat_id'];
+                        $sql2 = "SELECT pat_name FROM user where pat_id = '$pat_id'";
+                        $r_query2 = mysqli_query($con, $sql2);
+                        $row2 = mysqli_fetch_array($r_query2, MYSQLI_ASSOC);
+                        echo '<blockquote>';
+                          echo '<p>' . $row['review'] . '</p>';
+                          echo "<footer>" . $row2['pat_name'] . "</footer>";
+                        echo '</blockquote>';
                       }
                   }
             ?>

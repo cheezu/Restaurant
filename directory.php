@@ -81,9 +81,15 @@
         $sql= "select * from rest";
       }
       $r_query = mysqli_query($con, $sql);
+
+      echo '<div id = "directory">';
+
       while($row = mysqli_fetch_array($r_query, MYSQLI_ASSOC)) {
-        echo "<a href=\"restaurant.php?id=" . $row['res_id'] . "\">" . $row['name'] . "</a></br>";
+        echo "<a style=\"width: 50%; padding: 15px; \" href=\"restaurant.php?id=" . $row['res_id'] . "\" class=\"btn btn-default\" role=\"button\">" . $row['name'] . "</a><br>";
       }
+
+      echo '</div>';
+
       mysqli_close($con);
      ?>
 

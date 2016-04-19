@@ -134,28 +134,10 @@
                     <div class="container-fluid" id="find">
                         <form action="directory.php" id="search" method="GET" role="form">
                             <div class="form-group">
-                                <label for="search"><span class="glyphicon glyphicon-search"></span>Search</label>
+                                <label for="term"><span class="glyphicon glyphicon-search"></span>Search</label>
                                 <input type="search" class="form-control" name="term" placeholder="Search by restaurant name, location or cuisine..." maxlength="100" autocomplete="off">
                             </div>
                         </form>
-                    </div>
-                </div>
-
-                <div class="container-fluid" id="rev">
-                    <div class="jumbotron">
-                        <header>
-                            <h2>Latest Reviews</h2>
-                        </header>
-                        <section id="reviews">
-                            <p>
-                                <dl>
-                                    <dt>Username #1</dt>
-                                    <dd>Blah blah blah...</dd>
-
-                                    <dt>Username #2</dt>
-                                    <dd>Bleh bleh bleh...</dd>
-                                </dl>
-                            </p>
                     </div>
                 </div>
             </div>

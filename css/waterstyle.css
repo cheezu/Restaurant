@@ -14,7 +14,12 @@
 #topnav {
   border-radius: 0px !important;
 }
-
+#directory {
+  text-align: center;
+}
+header {
+  text-align: center;
+}
 
 .affix {
       top: 0;
