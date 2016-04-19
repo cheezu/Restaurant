@@ -96,24 +96,40 @@
     }
 
     if ($op == "buy") {
-        $sql = "SELECT sum(price * qty) as total FROM cart natural join product where pat_id = '$pat_id'";
+        $sql = "SELECT sum(price * qty) as total FROM cart natural join product where pat_id = '$pat_id'";  //Get the total amount
 
         $r_query = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
-
         $total = $row['total'];
 
-        $sql2 = "INSERT INTO delivery(pat_id, order_amount) VALUES ('$pat_id', $total)";
-
+        $sql2 = "INSERT INTO delivery(pat_id, order_amount) VALUES ('$pat_id', $total)";  //create order entry
 
         if(mysqli_query($con, $sql2)) {
-          echo "Deleted";
-          header("Location:../cart.php?cartResult=1");
+
+          $sql3="SELECT * FROM delivery WHERE pat_id = '$pat_id' order by order_id desc";   //get order id
+          $r_query = mysqli_query($con, $sql3);
+          $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
+          $order_id =  $row['order_id'];
+
+          $sql4 = "select * from cart where pat_id = '$pat_id'"; //get all p_id & qty from cart
+          $r_query = mysqli_query($con, $sql4);
+          while($row = mysqli_fetch_array($r_query, MYSQLI_ASSOC)) {
+            $qty = $row['qty'];
+            $p_id = $row['p_id'];
+            $sql5 = "INSERT INTO delivery_prod(order_id, p_id, qty) VALUES($order_id, $p_id, $qty)";   //put them in delivery_prod tab}
+            mysqli_query($con, $sql5);
+          }
+
+          $sql6 = "DELETE FROM cart WHERE pat_id = '$pat_id'";    //empty the cart
+          mysqli_query($con, $sql6);
+
+          echo "Bought";
+          header("Location:../order.php?cartResult=1&order=$order_id");
         }
         else {
           $error = "\"" . mysqli_error($con) . "\"" ;
           echo "<script>console.log($error);</script>";
-          // header("Location:../cart.php?cartResult=-1");
+          header("Location:../order.php?cartResult=-1");
         }
 
     }

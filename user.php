@@ -34,8 +34,13 @@
         <nav class="navbar navbar-inverse" id="topnav">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="directory.php">Directory</a></li>
+                    <li><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="directory.php"><span class="glyphicon glyphicon-book"></span> Directory</a></li>
+                    <?php
+                        if(isset($_SESSION['login_user'])) {
+                          echo "<li><a href=\"cart.php\"><span class=\"glyphicon glyphicon-shopping-cart\"></span> Cart</a></li>";
+                        }
+                    ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
         <?php
@@ -86,18 +91,6 @@
                 $sql = "SELECT * FROM user WHERE pat_id='$id'";
                 $r_query = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
-                // echo "<br>";
-                // echo "Name: " . $row['pat_name'];
-                // echo "<br>";
-                // echo "Date of Birth: " . $row['pat_bday'];
-                // echo "<br>";
-                // echo "Address: " . $row['pat_addr'];
-                // echo "<br>";
-                // echo "Phone Number: " . $row['pat_phone'];
-                // echo "<br>";
-                // echo "Email: " . $row['pat_mail'];
-                // echo "<br>";
-                // echo "<br>";
                 echo '
                 <div class="row">
                     <div class="col-sm-6">

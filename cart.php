@@ -34,8 +34,13 @@
         <nav class="navbar navbar-inverse" id="topnav">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="directory.php">Directory</a></li>
+                    <li><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="directory.php"><span class="glyphicon glyphicon-book"></span> Directory</a></li>
+                    <?php
+                        if(isset($_SESSION['login_user'])) {
+                          echo "<li class=\"active\"><a href=\"cart.php\"><span class=\"glyphicon glyphicon-shopping-cart\"></span> Cart</a></li>";
+                        }
+                    ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
         <?php
@@ -86,8 +91,9 @@
                                <th>Restaurant Name</th>
                                <th>Item Name</th>
                                <th>Item Type</th>
-                               <th>Price</th>
+                               <th>Unit Price</th>
                                <th>Quantity</th>
+                               <th>Price</th>
                                <th></th>
                              </tr>
                            </thead>
@@ -103,7 +109,8 @@
                                  <td>' . $row['p_name'] . '</td>
                                  <td>' . $row['type'] . '</td>
                                  <td>' . $row['price'] . '</td>
-                                 <td><input type="number" name="qty" value="' . $row['qty'] . '" required></td>
+                                 <td style="width: 300px;"><input type="number" name="qty" value="' . $row['qty'] . '" required></td>
+                                 <td>' . $row['price']*$row['qty'] . '</td>
                                  <td><button class="btn btn-primary" type="submit" name="submit" value="update">Update</button>
                                   <button class="btn btn-danger" type="submit" name="submit" value="delete">Delete</button></td>
                                  </div>
@@ -111,10 +118,17 @@
                             </tr>
                              ';
                            }
-                           echo '
-                                 </tbody>
-                                 </table>
+                           echo '</tbody>
+                                 </table>';
 
+                          $sql = "SELECT sum(price * qty) as total FROM cart natural join product where pat_id = '" . $_SESSION['login_user'] . "'";  //Get the total amount
+                          $r_query = mysqli_query($con, $sql);
+                          $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
+                          $total = $row['total'];
+
+                          echo "<strong>Total Price:</strong> $total<br>";
+
+                          echo   ' <br>
                                 <form action="php/itemHandler.php" role="form" method="POST">
                                    <button class="btn btn-danger" type="submit" name="submit" value="clear">Clear Cart</button>
                                    <button class="btn btn-primary" type="submit" name="submit" value="buy">Buy</button>

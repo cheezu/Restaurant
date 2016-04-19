@@ -34,8 +34,8 @@
         <nav class="navbar navbar-inverse" id="topnav">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="directory.php">Directory</a></li>
+                    <li><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="directory.php"><span class="glyphicon glyphicon-book"></span> Directory</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php

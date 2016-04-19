@@ -34,8 +34,13 @@
         <nav class="navbar navbar-inverse" id="topnav">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="directory.php">Directory</a></li>
+                    <li><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="directory.php"><span class="glyphicon glyphicon-book"></span> Directory</a></li>
+                    <?php
+                        if(isset($_SESSION['login_user'])) {
+                          echo "<li><a href=\"cart.php\"><span class=\"glyphicon glyphicon-shopping-cart\"></span> Cart</a></li>";
+                        }
+                    ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
         <?php
