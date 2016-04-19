@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd2">Confirm Password:</label>
-                                    <input type="password" class="form-control" name="pwd2" id="pwd2" >
+                                    <input type="password" class="form-control" name="pwd2" id="pwd2" onchange="passValidate()"  >
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Name:</label>
@@ -130,7 +130,7 @@
                                     <input type="text" class="form-control" name="addr" value="' . $row['pat_addr'] . '" id="addr" required>
                                 </div>
                                 <br>
-                                <button type="submit" class="btn btn-primary" name="submit">Update</button>
+                                <button type="submit" class="btn btn-primary" onclick="return passValidate()  " name="submit">Update</button>
                             </form>
                         </div>
                       </div>
@@ -167,7 +167,7 @@
 
    <script src="js/jquery-2.2.3.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
-
+  <script src="js/passValidate.js"></script>
 
    </body>
 

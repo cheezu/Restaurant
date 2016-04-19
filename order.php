@@ -150,7 +150,7 @@
             <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
         </footer>
 
-
+        <script src="js/jquery-2.2.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
 </body>
