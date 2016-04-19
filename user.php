@@ -70,13 +70,12 @@
         ?>
 
 
-        </div>
 
-        <div class="container-fluid">
 
-        <div>
+
 
         <?php
+
             $con=mysqli_connect("localhost", "root", "dbproject", "db_proj");
 
             if (!$con) {
@@ -88,11 +87,13 @@
 
             if (isset($_SESSION['login_user'])) {
                 $id = $_SESSION['login_user'];
+
                 $sql = "SELECT * FROM user WHERE pat_id='$id'";
                 $r_query = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
+                echo '<div class="row" style="margin-right: 0px; margin-left: 0x;">';
+
                 echo '
-                <div class="row">
                     <div class="col-sm-6">
                         <div class="container-fluid" id="signForm">
                             <form action="php/updateUserHandler.php" method="POST">
@@ -132,9 +133,30 @@
                                 <button type="submit" class="btn btn-primary" name="submit">Update</button>
                             </form>
                         </div>
-                    </div>
+                      </div>
+
                     ';
+                    echo '<div class="col-sm-6">
+                        <div class="container-fluid">
+                    ';
+                      echo '<h3>Order History</h3>';
+                      echo '<br>';
+                      $sql = "SELECT * from delivery where pat_id = '$id' order by order_id desc";
+                      $r_query = mysqli_query($con, $sql);
+
+                      while($row = mysqli_fetch_array($r_query, MYSQLI_ASSOC)) {
+                        $order = $row['order_id'];
+                        $amount = $row['order_amount'];
+                        $time = $row['order_datetime'];
+                        echo "<a style=\"width: 600px; \" href=\"order.php?cartResult=1&order=$order\" class=\"btn btn-default\" role=\"button\">Order ID: $order<br>Date: $time<br>Total Cost: $amount</a>";
+                        echo '<br>';
+                        echo '<br>';
+                      }
+                    echo '</div>';
+                  echo '</div>';
+                echo '</div>';
             }
+
             mysqli_close($con);
        ?>
 

@@ -70,32 +70,32 @@
                       exit;
                   }
 
-                  echo '<div class="row">';
-
-                  echo '<div class="col-sm-6">';
-                    echo '
-                      <h4><strong>Billing Details</strong></h4>
-                      <br>
-                    ';
-                    $id = $_SESSION['login_user'];
-                    $sql = "SELECT * FROM user WHERE pat_id='$id'";
-                    $r_query = mysqli_query($con, $sql);
-                    $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
-                      echo "<strong>Name: </strong>" . $row['pat_name'];
-                      echo "<br>";
-                      echo "<strong>Date of Birth: </strong>" . $row['pat_bday'];
-                      echo "<br>";
-                      echo "<strong>Phone Number: </strong>" . $row['pat_phone'];
-                      echo "<br>";
-                      echo "<strong>Email: </strong>" . $row['pat_mail'];
-                      echo "<br>";
-                      echo "<strong>Address: </strong>" . $row['pat_addr'];
-                      echo "<br>";
 
 
-                  echo '</div>';
+                  // echo '<div class="col-sm-6">';
+                  //   echo '
+                  //     <h4><strong>Billing Details</strong></h4>
+                  //     <br>
+                  //   ';
+                  //   $id = $_SESSION['login_user'];
+                  //   $sql = "SELECT * FROM user WHERE pat_id='$id'";
+                  //   $r_query = mysqli_query($con, $sql);
+                  //   $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
+                  //     echo "<strong>Name: </strong>" . $row['pat_name'];
+                  //     echo "<br>";
+                  //     echo "<strong>Date of Birth: </strong>" . $row['pat_bday'];
+                  //     echo "<br>";
+                  //     echo "<strong>Phone Number: </strong>" . $row['pat_phone'];
+                  //     echo "<br>";
+                  //     echo "<strong>Email: </strong>" . $row['pat_mail'];
+                  //     echo "<br>";
+                  //     echo "<strong>Address: </strong>" . $row['pat_addr'];
+                  //     echo "<br>";
+                  //
+                  //
+                  // echo '</div>';
 
-                  echo '<div class="col-sm-6">';
+
                       $sql = "select *, rest.name as rest_name, product.name as p_name from delivery_prod natural join product join rest using(res_id) where order_id=$order";
                       $r_query = mysqli_query($con, $sql);
                       echo '
@@ -136,7 +136,7 @@
                     $total = $row['order_amount'];
                     echo "<strong>Total Price:</strong> $total<br>";
 
-                  echo '</div>';
+
               }
 
               else {

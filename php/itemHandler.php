@@ -102,7 +102,7 @@
         $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
         $total = $row['total'];
 
-        $sql2 = "INSERT INTO delivery(pat_id, order_amount) VALUES ('$pat_id', $total)";  //create order entry
+        $sql2 = "INSERT INTO delivery(pat_id, order_amount, order_datetime) VALUES ('$pat_id', $total, CURRENT_TIMESTAMP)";  //create order entry
 
         if(mysqli_query($con, $sql2)) {
 
