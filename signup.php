@@ -52,10 +52,11 @@
         </nav>
 
         <!--Forms-->
-
+        <div class="wrapper">
         <div class="row">
             <div class="col-sm-6">
                 <div class="container-fluid" id="signForm">
+                  <h3><strong>Sign Up</strong></h3>
                     <form action="php/signupHandler.php" method="POST">
                         <div class="form-group">
                             <label for="user">Username</label>
@@ -95,22 +96,26 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="container-fluid">
-                    <h3>Your Benefits at Manipal Delights</h3><br>
-                    <p>&nbsp; Delivery within 45 Minutes</p><br>
-                    <p>&nbsp; Online Deals and Promotions</p><br>
-                    <p>&nbsp; Best Local Service Providers</p><br>
-                    <p>&nbsp; Reach More Categories</p><br>
-                    <p>&nbsp; Multiple Service Ordering</p><br>
-                    <p>&nbsp; Service Deliver to Doorstep</p><br>
-                    <p>&nbsp; Dedicated Customer Support</p><br>
+                <div class="container-fluid" style="line-height: 1.8em">
+                    <h3><strong>Your Benefits at Manipal Delights</strong></h3><br>
+                    <p>&nbsp; Delivery within 45 Minutes</p>
+                    <p>&nbsp; Online Deals and Promotions</p>
+                    <p>&nbsp; Best Local Service Providers</p>
+                    <p>&nbsp; Reach More Categories</p>
+                    <p>&nbsp; Multiple Service Ordering</p>
+                    <p>&nbsp; Service Deliver to Doorstep</p>
+                    <p>&nbsp; Dedicated Customer Support</p>
                 </div>
             </div>
+            <div class="push"></div>
           </div>
+        </div>
 
-            <footer class="container-fluid text-center footer">
+          <div class="footer">
+            <footer class="container-fluid text-center footer" style="padding: 250px 0 0;">
                 <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
             </footer>
+          </div>
 
 
             <script src="js/bootstrap.min.js"></script>

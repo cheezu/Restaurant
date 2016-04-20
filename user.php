@@ -86,11 +86,13 @@
                 $sql = "SELECT * FROM user WHERE pat_id='$id'";
                 $r_query = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($r_query, MYSQLI_ASSOC);
+                echo '<div class="wrapper">';
                 echo '<div class="row" style="margin-right: 0px; margin-left: 0x;">';
 
                 echo '
                     <div class="col-sm-6">
                         <div class="container-fluid" id="signForm">
+                          <h3><strong>My Profile</strong></h3>
                             <form action="php/updateUserHandler.php" method="POST">
                                 <div class="form-group">
                                     <label for="user">Username</label>
@@ -134,7 +136,7 @@
                     echo '<div class="col-sm-6">
                         <div class="container-fluid">
                     ';
-                      echo '<h3>Order History</h3>';
+                      echo '<h3><strong>Order History</strong></h3>';
                       echo '<br>';
                       $sql = "SELECT * from delivery where pat_id = '$id' order by order_id desc";
                       $r_query = mysqli_query($con, $sql);
@@ -150,19 +152,22 @@
                     echo '</div>';
                   echo '</div>';
                 echo '</div>';
+                echo '</div>';
             }
 
             mysqli_close($con);
        ?>
 
 
-   <footer class="container-fluid text-center footer">
-       <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
-   </footer>
+       <div class="footer">
+         <footer class="container-fluid text-center footer" style="padding: 250px 0 0;">
+             <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
+         </footer>
+       </div>
 
-   <script src="js/jquery-2.2.3.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-  <script src="js/passValidate.js"></script>
+       <script src="js/jquery-2.2.3.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+       <script src="js/passValidate.js"></script>
 
    </body>
 

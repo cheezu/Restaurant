@@ -72,6 +72,7 @@
            ?>
 
                <div class="container-fluid">
+                 <h3><strong>My Cart</strong></h3>
                    <?php
                           $con = mysqli_connect("localhost", "root", "dbproject", "db_proj");
 

@@ -51,8 +51,9 @@
             </div>
         </nav>
 
-
+        <div class="wrapper">
         <div class="container-fluid" id="signForm">
+          <h3><strong>Login</strong></h3>
             <form action="php/loginHandler.php" role="form" method="POST">
                 <div class="form-group">
                     <label for="user">Username</label>
@@ -65,10 +66,13 @@
                 <button type="submit" name="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
+        </div>
 
-        <footer class="container-fluid text-center footer">
-            <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
-        </footer>
+        <div class="footer">
+          <footer class="container-fluid text-center footer" style="padding: 250px 0 0;">
+              <p class="text-muted">Restaurant Database &#169; Shayna &#38; Mayank.</p>
+          </footer>
+        </div>
 
         <script src="js/jquery-2.2.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

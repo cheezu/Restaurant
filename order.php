@@ -56,6 +56,7 @@
             </div>
         </nav>
       <div class="container-fluid">
+        <h3><strong>Delivery Purchase</strong></h3>
         <?php
             if(isset($_GET['cartResult'])) {
               extract($_GET);
