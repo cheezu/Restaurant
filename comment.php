@@ -22,7 +22,7 @@
 
         <div id="logo">
         </div>
-        <div class="container-fluid" style="background-color:#455a64;color:#fff;height:200px;">
+        <div class="container-fluid" style="background-color:#ffa000;color:#fff;height:200px;">
             <h1>Manipal Delights</h1>
             <h4>FOOD RIGHT AT YOUR DOORSTEP</h4>
             <p>It's cooler. It's faster. It's better than ever before.</p>

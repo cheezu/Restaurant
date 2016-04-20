@@ -33,7 +33,7 @@ header {
   .carousel-inner img {
       width: 100%; /* Set width to 100% */
       margin: auto;
-      max-height: 45vh;
+      max-height: 55vh;
   }
 
   /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -42,4 +42,3 @@ header {
       display: none;
     }
   }
-  

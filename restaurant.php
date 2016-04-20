@@ -22,7 +22,7 @@
 
         <div id="logo">
         </div>
-        <div class="container-fluid" style="background-color:#455a64;color:#fff;height:200px;">
+        <div class="container-fluid" style="background-color:#ffa000;color:#fff;height:200px;">
             <h1>Manipal Delights</h1>
             <h4>FOOD RIGHT AT YOUR DOORSTEP</h4>
             <p>It's cooler. It's faster. It's better than ever before.</p>
@@ -70,10 +70,11 @@
 
        ?>
        <div class="row">
-           <div class="col-sm-6">
+           <div class="col-sm-6" style="line-height: 1.9em; padding: 0 0 0 30px;">
               <div class="container-fluid">
                   <?php
-              echo '<div>';
+                    echo '<div>';
+                    echo "<h3><strong>Restaurant Details</strong></h3>";
 
                   $con = mysqli_connect("localhost", "root", "dbproject", "db_proj");
 
@@ -92,15 +93,15 @@
                       echo "<br>";
                       echo "<img src=\"data:image/jpeg;base64," . base64_encode($row['image']) . " \" />";
                       echo "<br>";
-                      echo "Restaurant Name: " . $row['name'];
+                      echo "<strong>Restaurant Name: </strong>" . $row['name'];
                       echo "<br>";
-                      echo "Location: " . $row['location'];
+                      echo "<strong>Location: </strong>" . $row['location'];
                       echo "<br>";
-                      echo "Cuisine: " . $row['cuisine'];
+                      echo "<strong>Cuisine: </strong>" . $row['cuisine'];
                       echo "<br>";
-                      echo "Phone Number: " . $row['ph_no'];
+                      echo "<strong>Phone Number: </strong>" . $row['ph_no'];
                       echo "<br>";
-                      echo "Email: " . $row['mail'];
+                      echo "<strong>Email: </strong>" . $row['mail'];
                       echo "<br>";
                       echo "<strong>Average Rating: </strong>";
                       echo "<br>";

@@ -26,7 +26,7 @@
 
         <div id="logo">
         </div>
-        <div class="container-fluid" style="background-color:#455a64;color:#fff;height:200px;">
+        <div class="container-fluid" style="background-color:#ffa000;color:#fff;height:200px;">
             <h1>Manipal Delights</h1>
             <h4>FOOD RIGHT AT YOUR DOORSTEP</h4>
             <p>It's cooler. It's faster. It's better than ever before.</p>
@@ -90,23 +90,32 @@
      <ol class="carousel-indicators">
        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
        <li data-target="#myCarousel" data-slide-to="1"></li>
+       <li data-target="#myCarousel" data-slide-to="2"></li>
      </ol>
 
      <!-- Wrapper for slides -->
      <div class="carousel-inner" role="listbox">
        <div class="item active">
-         <img src="http://placehold.it/1200x400?text=IMAGE" alt="Image">
+         <img src="images/banner1.jpg" alt="Image">
          <div class="carousel-caption">
-           <h3>Supposed Restaurant 1</h3>
-           <p>All Hail a Black Picture!</p>
+           <h3>Think No More</h3>
+           <p>Dine at some of the finest restaurants.</p>
          </div>
        </div>
 
        <div class="item">
-         <img src="http://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+         <img src="images/banner2.jpg" alt="Image">
          <div class="carousel-caption">
-           <h3>Another Blank Picture</h3>
-           <p>Carousels are cool k</p>
+           <h3>Whenever, Wherever</h3>
+           <p>Delivery service available 24/7.</p>
+         </div>
+       </div>
+
+       <div class="item">
+         <img src="images/banner3.jpg" alt="Image">
+         <div class="carousel-caption">
+           <h3>Craving Sweets?</h3>
+           <p>Manipal offers some of the best desserts around.</p>
          </div>
        </div>
      </div>
